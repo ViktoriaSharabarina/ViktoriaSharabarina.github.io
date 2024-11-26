@@ -1,15 +1,18 @@
 h1 {
-    color: red;
+    color: red !important; 
 }
 
-.title {
-    font-size: 25px;
+h1::before {
+    content: "НЕТ"
 }
 
-.page-title {
-    font-size: 50px;
+h1::after {
+    content: "МОНЕТ";
 }
 
+h1::first-letter{
+    color: rgb(139, 209, 10);
+}
 
 /*Применение принципа насоедования с помощью тега BODY*/
 body {
@@ -19,8 +22,17 @@ body {
 }
 
 .container h2 {
-    color: blueviolet;
+    color: rgb(119, 40, 194);
     font-size: 25px;
     word-spacing: 10px;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+/*селектор с айди перебивает по весу селектор с классом*/ 
+#title {
+    font-size: 20px;
+}
+.page-title {
+    font-size: 50px;
+}
+
